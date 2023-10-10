@@ -6,7 +6,7 @@ The Medialab Madrid Archive (MLM Archive) Demo is a digital educational resource
 
 <br/>
 
-<img src="assets/img/index_readme300.JPG" width="100" height="100">
+<img src="assets/img/index_readme300.JPG" width="200%" height="200%">
 
 ## License
 
