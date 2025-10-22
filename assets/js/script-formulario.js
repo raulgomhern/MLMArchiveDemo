@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('userKeywords', JSON.stringify(selected));
 
     // Redirigir a la segunda pantalla
-    window.location.href = '../html/seleccion.html'; // ajusta la ruta si procede
+    window.location.href = '.././html/seleccion.html'; // ajusta la ruta si procede
     // Alternativa (misma ventana) con assign():
     // window.location.assign('../html/seleccion.html'); // [MDN: Location.assign]
   });
