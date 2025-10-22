@@ -10,11 +10,13 @@
 <body>
   <h1>Introduce tu información y haz tu selección</h1>
 
-  <p>1. Escribe la información que tengas sobre el tema que estés interesada:</p>
-  <textarea id="infoInput" rows="4" placeholder="Escribe aquí..."></textarea>
+  <label for="infoInput">1. Escribe la información que tengas sobre el tema que estés interesada:</label>
+  <textarea id="infoInput" rows="4" placeholder="Escribe aquí..." aria-describedby="infoCount"></textarea>
+  <div id="infoCount" class="counter" aria-live="polite">0/1000</div>
 
-  <p>2. Selecciona las palabras clave:</p>
-  <select id="keywordSelect" multiple>
+  <label for="keywordSelect">2. Selecciona las palabras clave:</label>
+  <p class="hint">Haz clic para añadir; vuelve a hacer clic para quitar. No necesitas mantener teclas.</p>
+  <select id="keywordSelect" multiple aria-label="Palabras clave">
     <option>Zonas verdes</option>
     <option>Infraestructura verde</option>
     <option>Movilidad sostenible</option>
@@ -52,9 +54,12 @@
     <option>Prototipado colaborativo</option>
   </select>
 
-  <div id="selectedChips" class="chips"></div>
+  <div id="selectedChips" class="chips" aria-live="polite" aria-label="Seleccionadas"></div>
 
-  <button id="submitBtn">Enviar</button>
+  <div class="toolbar">
+    <button id="clearBtn" type="button">Limpiar selección</button>
+    <button id="submitBtn" type="button">Enviar</button>
+  </div>
 
   <script src=".././js/script-formulario.js"></script>
 </body>
