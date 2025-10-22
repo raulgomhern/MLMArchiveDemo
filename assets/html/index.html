@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Robert the Bruce — Recurso</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+<article class="scroll-wrapper">
+
+  <!-- Sección 1 -->
+  <section class="scroll-section banner-section" id="top">
+    <div class="banner-bg" role="img" aria-label="Imagen de fondo de portada"></div>
+    <div class="banner-overlay"></div>  
+
+    <div class="banner-content">
+      <h1>
+        <span class="highlight">Inspírate en los proyectos de Medialab Madrid</span>
+      </h1>
+    </div>
+
+    <div class="image-credit">
+      World Processor. Ingo Gunther<br />
+      <span class="license"> Under Cpyright</span>
+    </div>
+
+    <!-- Flecha naranja hacia abajo -->
+    <button class="scroll-down" aria-label="Bajar a la siguiente sección" data-target="#intro"></button>
+  </section>
+ <a href="#top" class="site-logo" aria-label="Medialab Logo">
+    <img src="https://archivomedialabmadrid.org/wp-content/themes/medialab/files/media/logo.png" alt="Medialab Logo" />
+  </a>
+  <!-- Sección 2 (intro) -->
+  <section class="scroll-section intro-section" id="intro">
+    <div class="intro-content">
+      <h1>
+        El Archivo de Medialab Madrid, albergado en el Archio General de la Universidad Complutense de Madrid, contiene el resultado de la documentación, exposición y trabajo en proyectos de arte, ciencia, tecnología y sociedad en el marco  del programa de MedialabMadrid (2002-2026), ubicado en el Centro Cultural Conde Duque y co-dirigido por Karin Ohlenschläger y Luis Rico.</br></br></br>
+      En este recurso podrás conocer los proyectos que mejor se ajusten a tus propios temas de estudio o investigación
+ 
+      </h1>
+    </div>
+
+    <!-- Flecha a la sección 3 -->
+    <button class="scroll-down inside" aria-label="Bajar a la sección de historia" data-target="#history"></button>
+  </section>
+
+ <!-- Sección 3 (bio/historia) convertida en grid de tarjetas -->
+<section class="scroll-section instrucciones-section" id="instrucciones">
+  <div class="bio-content">
+    <h1 class="cards-title">Inspirarte con los proyectos MedialabMadrid es muy fácil</h1>
+    <div class="bio-cards cards-row" role="list">
+      <article class="vcard" role="listitem"><p>1. Introduce tu texto y selecciona las palabras claves.</p></article>
+      <article class="vcard" role="listitem"><p>2. Selecciona el proyecto que más se ajuste a tu tema y pulsa en redactar</p></article>
+      <article class="vcard" role="listitem"><p>3. Obtendrás un texto que incluye tu texto y lo ilustra con la información del proyecto que has seleccionado.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Sección 4 (experimenta) -->
+<section class="scroll-section experiment-section" id="experimenta">
+  <div class="experiment-bg" role="img" aria-label="Fondo sección Experimenta"></div>
+  <div class="experiment-overlay"></div>
+
+  <div class="experiment-content">
+    <a href="#top" class="btn-experimenta" aria-label="Ir a experimentar">EXPERIMENTA</a>
+  </div>
+</section>
+
+</article>
+
+<script src="script.js"></script>
+</body>
+</html>
