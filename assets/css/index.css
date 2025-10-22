@@ -1,0 +1,341 @@
+/* styles.css */
+:root {
+  --overlay: rgba(0, 0, 0, 0.45);
+  --overlay-strong: rgba(0, 0, 0, 0.65);
+  --text: #666666;
+  --text-dark: #222222;
+  --accent: #f38b00; /* naranja flecha */
+  --title-size: clamp(2rem, 5.8vw, 4.6rem);
+  --body-size: clamp(1rem, 2.2vw, 1.15rem);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  scroll-behavior: smooth; /* soporte nativo */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+.scroll-wrapper { width: 100%; }
+
+.scroll-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 4rem 1.25rem;
+}
+
+/* ============= Sección 1 (banner) ============= */
+.banner-section {
+  color: var(--text);
+  text-align: center;
+  overflow: hidden;
+}
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.squarespace-cdn.com/content/v1/574abcd9d210b84cd9730450/1464896085308-J5BKI5M5P2HYGRAKIA7Y/worldprocessor.kah.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
+  will-change: transform;
+  z-index: 0;
+}
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, var(--overlay) 55%, var(--overlay-strong) 100%);
+  z-index: 1;
+}
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  padding: 0 1rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.45);
+}
+.banner-content h1 {
+  margin: 0 0 0.75rem 0;
+  font-weight: 800;
+  font-size: var(--title-size);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+.banner-content .author {
+  margin: 0;
+  font-size: var(--body-size);
+  font-weight: 300;
+  opacity: 0.95;
+}
+.highlight { color: #ffd48a; }
+
+/* Créditos de imagen (esquina inferior izquierda) */
+.image-credit {
+  position: absolute;
+  left: 20px;
+  bottom: 16px;
+  z-index: 2;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.95);
+  text-align: left;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.image-credit .license { opacity: 0.8; }
+
+/* Flecha naranja hacia abajo (CSS puro) */
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 3;
+  outline: none;
+}
+
+/* ============= Sección 2 (intro) ============= */
+.intro-section {
+  height: 100%;
+  background-color: #ffb76b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+.intro-content { max-width: 1000px; }
+.intro-content h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* ============= Sección 3 (bio) ============= */
+.bio-section {
+  height: 100%;
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 40px 20px;
+  text-align: justify;
+}
+.bio-content { max-width: 1000px; }
+.bio-content h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+/* ============= Sección 4 (instrucciones) ============= */
+/* Sección y título */
+.instrucciones-section {
+  background: #0f0f0f;
+  color: #666666;
+  text-align: left;
+  padding-top: clamp(4rem, 8vh, 7rem);
+  padding-bottom: clamp(4rem, 8vh, 7rem);
+  display: block; /* evita centrado/estirado del grid padre */
+}
+.cards-title {
+  margin: 0 0 1rem 0;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  color: #eaeaea;
+  text-align:center;
+}
+
+/* Carril horizontal: fila con columnas implícitas fijas */
+.instrucciones-section .bio-cards.cards-row {
+  display: grid;
+  grid-auto-flow: column;                      /* una sola fila */
+  grid-auto-columns: minmax(260px, 300px);     /* base consistente por tarjeta */
+  gap: 0.75rem;                                /* separación uniforme */
+  overflow-x: auto;
+  padding: 0.25rem 0 0.75rem;
+  padding-left: 0.5rem;                        /* respiro laterales */
+  padding-right: 0.5rem;
+  scroll-snap-type: x mandatory;
+  justify-content: start;                      /* carril pegado a la izq */
+  justify-items: start;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-inline: 0.5rem;               /* snap acorde al padding */
+}
+
+/* Hijos directos: nada de width:100%; sin márgenes propios */
+.instrucciones-section .bio-cards.cards-row > * {
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Tarjetas verticales naranja con texto blanco */
+.instrucciones-section .vcard {
+  background: #ff8c00;
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 1.25rem 1.1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  scroll-snap-align: start;
+  transition: transform 200ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+.instrucciones-section .vcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+  background: #ff9a1f;
+}
+.instrucciones-section .vcard:focus-within {
+  outline: 2px solid #ffd48a;
+  outline-offset: 3px;
+}
+.instrucciones-section .vcard p {
+  margin: 0;
+  font-size: clamp(0.98rem, 1.9vw, 1.08rem);
+  line-height: 1.6;
+  color: #ffffff;
+  overflow-wrap: anywhere;   /* evita que el texto ensanche la tarjeta */
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* Numeración opcional dentro de cada tarjeta */
+.vcard .vcard-num {
+  margin: 0 0 0.5rem 0;
+  font: 800 clamp(1.1rem, 2.2vw, 1.3rem)/1 Inter, system-ui, sans-serif;
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* Responsivo: en móviles, tarjetas un poco más estrechas */
+@media (max-width: 520px) {
+  .cards-row { grid-auto-columns: minmax(220px, 240px); }
+}
+
+/* ============= Sección 4 (experimenta) ============= */
+.experiment-section {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;           /* centra el botón */
+  overflow: hidden;
+}
+
+/* Fondo: sustituye la URL por tu foto si es otra */
+.experiment-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://tribuna.ucm.es/file/news/img-20250430-104014212-mfnr/?ver');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Overlay para legibilidad del botón */
+.experiment-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25) 0%,
+    rgba(0,0,0,0.45) 55%,
+    rgba(0,0,0,0.6) 100%
+  );
+  z-index: 1;
+}
+
+.experiment-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+/* Botón NARANJA como las tarjetas de la sección 3 */
+.btn-experimenta {
+  display: inline-block;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  background: #ff8c00;          /* mismo naranja */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  font-size: clamp(1rem, 2.6vw, 1.15rem);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.btn-experimenta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.32);
+  background: #ff9a1f;
+}
+
+.btn-experimenta:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.24);
+}
+
+.btn-experimenta:focus-visible {
+  outline: 3px solid #ffd48a;
+  outline-offset: 3px;
+}
+
+/* Responsivo: reduce padding en pantallas pequeñas */
+@media (max-width: 480px) {
+  .btn-experimenta { padding: 0.85rem 1.2rem; }
+}
+
+
+/* Logo arriba-derecha */
+.site-logo {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 3;
+  display: inline-block;
+}
+.site-logo img {
+  height: 48px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.35));
+}
+
+/* En pantallas pequeñas, reduce el tamaño del logo */
+@media (max-width: 600px) {
+  .site-logo { top: 12px; right: 12px; }
+  .site-logo img { height: 40px; }
+}
