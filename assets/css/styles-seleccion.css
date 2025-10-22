@@ -1,0 +1,89 @@
+body {
+  background-color: #0f0f0f;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+}
+h2 {
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  background-color: #ffffff;
+  color: #0f0f0f;
+  border-radius: 12px;
+  padding: 16px;
+  width: 320px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border-color 0.2s ease, transform 0.1s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+}
+.card.active {
+  border-color: #ff8c00;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.card h3 {
+  margin: 12px 0 6px 0;
+  color: #0f0f0f;
+}
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+.taglist {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  background: #ff8c00;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+.actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.actions button {
+  color: #ffffff;
+  background: #333333;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.actions a {
+  color: #ffffff;
+  background: #333333;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.actions a:hover,
+.actions button:hover:enabled {
+  background: #4a4a4a;
+}
