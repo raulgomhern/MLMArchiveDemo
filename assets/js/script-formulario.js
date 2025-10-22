@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     localStorage.setItem('userInfo', info);
     localStorage.setItem('userKeywords', JSON.stringify(selected));
-    window.location.href = '.././seleccion.html';
+    window.location.href = '.././html/seleccion.html';
   });
 
   function escapeHTML(str) {
