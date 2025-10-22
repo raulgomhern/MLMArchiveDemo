@@ -24,6 +24,20 @@ textarea {
   box-sizing: border-box;
   font-size: 14px;
 }
+.media {
+  margin-top: 16px;
+}
+.media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+.caption {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #cccccc;
+}
 .actions {
   margin-top: 16px;
   display: flex;
@@ -41,3 +55,4 @@ textarea {
 .actions a:hover, .actions button:hover {
   background: #4a4a4a;
 }
+
