@@ -5,18 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Formulario final</title>
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/raulgomhern/MLMArchiveDemo/refs/heads/main/assets/img/bombilla.png">
-  <link rel="stylesheet" href=".././css/styles-final.css" />
+  <link rel="stylesheet" href="../css/styles-final.css" />
 </head>
 <body>
   <h2>Formulario final</h2>
+
   <form id="finalForm">
     <label for="textoFinal">Texto final:</label>
     <textarea id="textoFinal" rows="12" readonly></textarea>
+
+    <!-- Contenedor para la imagen debajo de todos los textos -->
+    <div class="media">
+      <img id="projectImage" alt="Imagen del proyecto seleccionado">
+      <p id="imageCaption" class="caption"></p>
+    </div>
+
     <div class="actions">
-      <a href=".././html/seleccion.html">Volver</a>
+      <a href="../html/seleccion.html">Volver</a>
       <button type="submit">Confirmar</button>
     </div>
   </form>
-  <script src=".././js/script-final.js"></script>
+
+  <script src="../js/script-final.js"></script>
 </body>
 </html>
+
