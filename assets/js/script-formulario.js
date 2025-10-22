@@ -35,17 +35,23 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('Selecciona al menos una palabra clave');
       return;
     }
+    // Guardar datos para pantallas siguientes
     localStorage.setItem('userInfo', info);
     localStorage.setItem('userKeywords', JSON.stringify(selected));
-    window.location.href = '.././html/seleccion.html';
+
+    // Redirigir a la segunda pantalla
+    window.location.href = '../html/seleccion.html'; // ajusta la ruta si procede
+    // Alternativa (misma ventana) con assign():
+    // window.location.assign('../html/seleccion.html'); // [MDN: Location.assign]
   });
 
   function escapeHTML(str) {
-    return str
+    return String(str)
       .replaceAll('&', '&amp;')
       .replaceAll('<', '&lt;')
       .replaceAll('>', '&gt;')
       .replaceAll('"', '&quot;')
-      .replaceAll("'", '&#39;');
+      .replaceAll("'", '&#39;'); // corregido: escapado de comilla simple
   }
 });
+
