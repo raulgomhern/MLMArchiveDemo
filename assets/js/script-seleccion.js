@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('finalKeywords', JSON.stringify(claves));
 
     // Redirección a tu tercera pantalla (ajusta si usas local o CodePen)
-    window.location.href = 'https://codepen.io/RA-L-G-MEZ-HERN-NDEZ/full/emJMZJB';
+    window.location.href = '.././html/final.html';
   });
 });
 
