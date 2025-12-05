@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
       autores: "La Fiambrera Obrera; taller en Medialab Madrid (2005)",
       descripcion: "Videojuego participativo en Lavapiés donde jóvenes migrantes se representan y organizan colectivamente, usando el juego como herramienta de inclusión y articulación comunitaria.",
       palabras: ["participación ciudadana","co-creación","inclusión","videojuego","comunidad","juventud","barrio","cultura digital","Justicia social","Igualdad de oportunidades","Pensamiento crítico"],
-      imagen: "https://static.flickr.com/56/177844236_75e43126d8_o.jpg"
+      imagen: "https://archivomedialabmadrid.org/wp-content/uploads/2024/04/MLM_Bordergames.jpg"
     },
     {
       id: "megafone",
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
       autores: "Antoni Abad (2004)",
       descripcion: "Plataforma web y móvil donde colectivos marginados publican audio, vídeo, texto e imagen en tiempo real para amplificar sus voces.",
       palabras: ["tecnologías cívicas","comunicación comunitaria","móviles","datos ciudadanos","derechos","visibilidad social","Transformación digital","Ciencia ciudadana","Datos urbanos"],
-      imagen: "https://static.flickr.com/56/177844236_75e43126d8_o.jpg"
+      imagen: "https://megafone.net/INFO/files/images/accessible_map.jpg"
     },
     {
       id: "wikimap",
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       autores: "MVRDV, con Stroom Den Haag (2000)",
       descripcion: "Visión especulativa de “Pig Towers” con bioenergía y automatización para mitigar impactos de la producción porcina en clave urbana.",
       palabras: ["urbanismo especulativo","energía renovable","eficiencia","economía circular","agrociudad","comunicación visual","Energías renovables","Eficiencia energética","Materiales sostenibles"],
-      imagen: "https://static.flickr.com/56/177844236_75e43126d8_o.jpg"
+      imagen: "https://www.mvrdv.com/media//scraped/7db71cfc-7f95-46d6-8e9d-fa7c5a86e403.jpg"
     },
     {
       id: "worldprocessor",
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
       autores: "Ingo Günther",
       descripcion: "Serie de globos-terraqueos-escultura que cartografían fenómenos globales (refugiados, energía, incendios) para concienciar ambientalmente.",
       palabras: ["visualización de datos","cartografía crítica","cambio climático","recursos","conciencia ambiental","Calidad del aire","Contaminación acústica","ODS 11","Agenda 2030"],
-      imagen: "https://static.flickr.com/56/177844236_75e43126d8_o.jpg"
+      imagen: "https://images.squarespace-cdn.com/content/v1/574abcd9d210b84cd9730450/1464896085308-J5BKI5M5P2HYGRAKIA7Y/worldprocessor.kah.jpeg"
     },
     {
       id: "balcanes",
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       autores: "Personal Cinema",
       descripcion: "Videojuego-obra que convierte la exposición en un entorno inmersivo para reflexionar sobre geopolítica y vida cotidiana en conflicto.",
       palabras: ["videojuego crítico","participación","geopolítica","inmersión","educación crítica","cultura digital","Verificación de información","Transformación digital"],
-      imagen: "https://static.flickr.com/56/177844236_75e43126d8_o.jpg"
+      imagen: "https://archivomedialabmadrid.org/wp-content/uploads/2024/04/MLM_La_creacion_de_la_guerra_de_los_Balcanes-621x500.jpg"
     }
   ];
 
