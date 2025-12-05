@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tresClaves = (claves && claves.length) ? claves : (proyecto.palabras || []).slice(0, 3);
 
   const textoUsuario = userInfo ? `${userInfo}\n\n` : '';
-  const cuerpo = `En relación con este caso, en el programa Medialab Madrid (2002-2006) cuyo archivo se encuentra en el Archivo General de la Universidad Complutense de Madrid, se realizó el proyecto ${titulo}, ${descripcion} y se relación con estos temas ${tresClaves.join(', ')}.`;
+  const cuerpo = `En relación con este caso, en el programa Medialab Madrid (2002-2006) cuyo archivo se encuentra en el Archivo General de la Universidad Complutense de Madrid, se realizó el proyecto ${titulo}, ${descripcion} y se relaciona con los temas de ${tresClaves.join(', ')}.`;
 
   ta.value = textoUsuario + cuerpo;
 
